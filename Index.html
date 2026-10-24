@@ -1,0 +1,369 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Sabiya 💙💜</title>
+
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Trebuchet MS", sans-serif;
+  color: #f4f0ff;
+  text-align: center;
+  background:
+    radial-gradient(ellipse at top, #293c83 0%, transparent 55%),
+    linear-gradient(145deg, #07152f, #171344, #392064);
+  overflow-x: hidden;
+}
+
+.stars {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.star {
+  position: absolute;
+  color: #c8d7ff;
+  animation: twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle {
+  to { opacity: .25; transform: scale(.6); }
+}
+
+main {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 480px;
+  margin: auto;
+  padding: 35px 20px 45px;
+}
+
+.tag {
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: #c6caff;
+}
+
+h1 {
+  font-size: clamp(36px, 9vw, 49px);
+  color: #d9d4ff;
+  margin: 22px 0;
+  text-shadow: 0 0 24px #9277ff;
+}
+
+.sub {
+  color: #c9d9ff;
+  margin: 15px 0 25px;
+  line-height: 1.8;
+}
+
+.card {
+  background: linear-gradient(
+    145deg,
+    #ffffff12,
+    #9b83ff0c
+  );
+  border: 1px solid #aaa5ff55;
+  border-radius: 25px;
+  padding: 25px 18px;
+  margin-top: 20px;
+  box-shadow: 0 10px 35px #05051f44,
+              inset 0 0 20px #8585ff08;
+  backdrop-filter: blur(10px);
+}
+
+.envelope {
+  font-size: 90px;
+  cursor: pointer;
+  animation: float 1.8s infinite ease-in-out;
+}
+
+@keyframes float {
+  50% { transform: translateY(-10px); }
+}
+
+button {
+  border: 1px solid #d0c8ff66;
+  border-radius: 30px;
+  padding: 14px 22px;
+  margin: 12px 4px;
+  background: linear-gradient(100deg, #438aff, #9465f5, #7754dc);
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 0 22px #7066ff55;
+  transition: transform .2s, box-shadow .2s;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 30px #887aff99;
+}
+
+input {
+  width: 90%;
+  max-width: 270px;
+  padding: 14px;
+  border-radius: 14px;
+  border: 1px solid #a9a0ff;
+  background: #f5f3ff;
+  color: #242050;
+  font-size: 16px;
+  text-align: center;
+  outline: none;
+}
+
+.hidden { display: none; }
+
+h2 {
+  color: #c9c5ff;
+  margin: 12px 0 18px;
+  text-shadow: 0 0 15px #8475ff66;
+}
+
+p { line-height: 1.9; }
+
+.note {
+  color: #e0e5ff;
+  margin: 15px 0;
+}
+
+.error {
+  color: #ffb8e7;
+  font-size: 14px;
+  min-height: 22px;
+}
+
+.gift {
+  font-size: 90px;
+  animation: float 1.5s infinite;
+}
+
+.footer {
+  font-size: 12px;
+  color: #b9c8ff;
+  margin-top: 30px;
+}
+
+.heart {
+  position: fixed;
+  bottom: -35px;
+  z-index: 5;
+  pointer-events: none;
+  animation: rise 4s linear forwards;
+}
+
+@keyframes rise {
+  to {
+    transform: translateY(-110vh) rotate(35deg);
+    opacity: 0;
+  }
+}
+
+.divider {
+  margin: 25px;
+  color: #a7b6ff;
+  letter-spacing: 5px;
+}
+</style>
+</head>
+
+<body>
+<div class="stars" id="stars"></div>
+
+<main>
+  <div class="tag">✦ A SECRET MADE WITH LOVE ✦</div>
+
+  <h1>For Sabiya 💙💜</h1>
+
+  <p class="sub">
+    A little surprise is waiting for you...<br>
+    Open your heart and discover it. 💌
+  </p>
+
+  <section class="card" id="start">
+    <div class="envelope">💌</div>
+    <h2>Your Secret Letter</h2>
+    <p class="note">This letter is only for you, bestie. 💜</p>
+    <button onclick="openLetter()">Open My Letter ✨</button>
+  </section>
+
+  <section class="card hidden" id="letter">
+    <h2>Dear Sabiya 💙</h2>
+
+    <p class="note">
+      Yaar, I'm really sorry! 🥺💜<br>
+      Main tumhara birthday bhool gayi.
+      Please mujhe maaf kar dena.
+    </p>
+
+    <p class="note">
+      Tum mere liye bahut special ho.
+      Birthday bhoolne ka matlab ye nahi
+      ki main tumhe bhool gayi. 🫂
+    </p>
+
+    <p class="note">
+      May your life shine like the stars,
+      your dreams touch the sky,
+      and your heart always find happiness. ✨
+    </p>
+
+    <p><b>Late wish, endless love! 💙</b></p>
+
+    <button onclick="showPassword()">
+      Unlock Your Gift 🎁
+    </button>
+  </section>
+
+  <div class="divider">✧ 💙 ✧</div>
+
+  <section class="card hidden" id="lock">
+    <div style="font-size:65px">🔐</div>
+    <h2>A Little Secret</h2>
+
+    <p class="note">
+      Enter your secret password to unlock the surprise.
+    </p>
+
+    <input id="password"
+      type="password"
+      placeholder="Enter password">
+
+    <br>
+
+    <button onclick="unlock()">Unlock My Gift 💜</button>
+
+    <p class="error" id="error"></p>
+
+    <p style="font-size:12px;color:#bfcaff">
+      Hint: Your name in capital letters ✨
+    </p>
+  </section>
+
+  <section class="card hidden" id="giftPanel">
+    <div class="gift">🎁</div>
+    <h2>Your Surprise Is Here! 💙</h2>
+
+    <p class="note">Surprise, Sabiya! 🎉</p>
+
+    <p class="note">
+      Happy Birthday to you! 🎂💜<br><br>
+      May every new day bring you closer
+      to your dreams. May your life be filled
+      with peace, laughter, success and love. ✨
+    </p>
+
+    <p class="note">
+      Thank you for being a special part of my life.
+      Here's to more laughter, beautiful memories
+      and a friendship that keeps growing. ♾️
+    </p>
+
+    <h2>Love You, Bestie! 💙💜</h2>
+
+    <p>Made with love by Ashiya 💌</p>
+
+    <button onclick="celebrate()">
+      Send More Love 💖
+    </button>
+  </section>
+
+  <div class="divider">💜 ✦ 💙</div>
+
+  <p class="sub">
+    A little website, a big hug in words. 🫂<br>
+    Forever wishing you happiness, Sabiya.
+  </p>
+
+  <div class="footer">
+    Made specially for Sabiya by Ashiya 🌙
+  </div>
+</main>
+
+<script>
+for (let i = 0; i < 65; i++) {
+  const s = document.createElement("span");
+  s.className = "star";
+  s.textContent = Math.random() > .5 ? "✦" : "·";
+  s.style.left = Math.random() * 100 + "%";
+  s.style.top = Math.random() * 100 + "%";
+  s.style.fontSize = (8 + Math.random() * 13) + "px";
+  s.style.animationDelay = Math.random() * 2 + "s";
+  document.getElementById("stars").appendChild(s);
+}
+
+function show(id) {
+  document.getElementById(id).classList.remove("hidden");
+  document.getElementById(id).scrollIntoView({
+    behavior: "smooth",
+    block: "center"
+  });
+}
+
+function openLetter() {
+  show("letter");
+  hearts();
+}
+
+function showPassword() {
+  show("lock");
+}
+
+function unlock() {
+  const pass = document.getElementById("password")
+    .value.trim().toUpperCase();
+
+  if (pass === "SABIYA") {
+    document.getElementById("error").textContent = "";
+    show("giftPanel");
+    hearts();
+  } else {
+    document.getElementById("error").textContent =
+      "Oops! Try again, bestie 💙";
+  }
+}
+
+document.getElementById("password").addEventListener(
+  "keydown", e => {
+    if (e.key === "Enter") unlock();
+  }
+);
+
+function hearts() {
+  const emojis = ["💙", "💜", "✨", "🦋", "💎", "🌙"];
+
+  for (let i = 0; i < 30; i++) {
+    const h = document.createElement("span");
+    h.className = "heart";
+    h.textContent =
+      emojis[Math.floor(Math.random() * emojis.length)];
+
+    h.style.left = Math.random() * 100 + "vw";
+    h.style.fontSize = (18 + Math.random() * 20) + "px";
+    h.style.animationDuration = (3 + Math.random() * 3) + "s";
+
+    document.body.appendChild(h);
+    setTimeout(() => h.remove(), 6500);
+  }
+}
+
+function celebrate() {
+  hearts();
+}
+</script>
+</body>
+</html>
